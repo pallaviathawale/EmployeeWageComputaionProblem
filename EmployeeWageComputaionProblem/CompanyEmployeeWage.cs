@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputaionProblem
 {
-    public class CompanyEmpWage
+    public class CompanyEmployeeWage
     {
         public string company;
         public int Wage_Per_Hour;
         public int Max_Days_IN_Month;
         public int Max_HrsInMonth;
         public int sallary;
-        public CompanyEmpWage(string company, int Wage_Per_Hour, int Max_Days_IN_Month, int Max_HrsInMonth)
+
+
+        public CompanyEmployeeWage(string company, int Wage_Per_Hour, int Max_Days_IN_Month, int Max_HrsInMonth)
         {
             this.company = company;
             this.Wage_Per_Hour = Wage_Per_Hour;
