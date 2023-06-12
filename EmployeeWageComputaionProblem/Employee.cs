@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputaionProblem
 {
-    public class Employee
+    public class EmployeeWage
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
         private List<CompanyEmpWage> CompanywageArr;
-        private int noOfCompany = 0;
-        public Employee()
+
+        public EmployeeWage()
         {
             CompanywageArr = new List<CompanyEmpWage>();
         }
         public void addCompanies(string company, int Wage_Per_Hour, int Max_Days_IN_Month, int Max_HrsInMonth)
         {
             CompanyEmpWage Emp = new CompanyEmpWage(company, Wage_Per_Hour, Max_Days_IN_Month, Max_HrsInMonth);
-
             this.CompanywageArr.Add(Emp);
+
         }
 
         public void EmpComputation()
@@ -36,12 +36,12 @@ namespace EmployeeWageComputaionProblem
 
         private int EmpComputation(CompanyEmpWage emp)
         {
-            int empHour;
+            int empHour = 0;
             int totalHours = 0;
             int totalDays = 0;
             int totalSallary = 0;
             Console.WriteLine();
-            Console.WriteLine("---------- " + emp.company + "--------");
+            Console.WriteLine("---------" + emp.company + "");
 
             while (totalHours <= emp.Max_HrsInMonth && totalDays <= emp.Max_Days_IN_Month)
             {
@@ -79,6 +79,5 @@ namespace EmployeeWageComputaionProblem
             }
             return emp.sallary;
         }
-
     }
 }
